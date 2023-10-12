@@ -1,8 +1,9 @@
 {
-  "name": "yml-min",
+  "name": "@charles-evolv/yml-min",
   "version": "0.1.0",
   "description": "",
   "main": "bin/index.js",
+  "author": "Charles Robertson <charles.robertson@evolv.ai>",
   "bin": {
     "yml-min": "./bin/index.js"
   },
@@ -10,7 +11,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.2",
