@@ -1,6 +1,6 @@
 {
   "name": "@charles-evolv/yml-min",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Post processing for Evolv AI YAML files",
   "main": "bin/index.js",
   "author": "Charles Robertson <charles.robertson@evolv.ai>",

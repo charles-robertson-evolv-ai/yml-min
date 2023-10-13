@@ -49,7 +49,7 @@ async function processContexts() {
     const contextId = context._id;
     createDir(`${outputDir}/${contextId}`);
     fs.writeFileSync(`${outputDir}/${contextId}/script.js`, context._metadata.script)
-    fs.writeFileSync(`${outputDir}/${contextId}/styles.css`, context._metadata.styles)
+    fs.writeFileSync(`${outputDir}/${contextId}/styles.scss`, context._metadata.preprocessors.css.source)
     context._metadata.script = await transformJS(context._metadata.script);
     context._metadata.styles = await postcssTransform(context._metadata.styles);
 
@@ -59,7 +59,7 @@ async function processContexts() {
         for (const variant of context[key]._values) {
           createDir(`${outputDir}/${contextId}/${key}/${variant._value.id}`);
           fs.writeFileSync(`${outputDir}/${contextId}/${key}/${variant._value.id}/script.js`, variant._value.script);
-          fs.writeFileSync(`${outputDir}/${contextId}/${key}/${variant._value.id}/styles.css`, variant._value.styles);
+          fs.writeFileSync(`${outputDir}/${contextId}/${key}/${variant._value.id}/styles.scss`, variant._metadata.preprocessors.css.source);
           variant._value.script = await transformJS(variant._value.script);
           variant._value.styles = await postcssTransform(variant._value.styles);
         };
