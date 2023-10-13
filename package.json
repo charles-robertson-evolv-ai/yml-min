@@ -1,22 +1,26 @@
 {
   "name": "@charles-evolv/yml-min",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.7",
+  "description": "Post processing for Evolv AI YAML files",
   "main": "bin/index.js",
   "author": "Charles Robertson <charles.robertson@evolv.ai>",
   "bin": {
-    "yml-min": "./bin/index.js"
+    "yml-min": "./bin/index.mjs"
   },
+  "files": [
+    "bin"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "cssnano": "^6.0.1",
     "js-yaml": "^4.1.0",
+    "nodemon": "^3.0.1",
     "postcss": "^8.4.31",
     "postcss-sort-media-queries": "^5.2.0",
     "terser": "^5.21.0"

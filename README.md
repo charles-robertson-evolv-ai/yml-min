@@ -15,10 +15,21 @@ Applies post-processing and minification to scripts and styles contained in Evol
 - sort-media-queries plugin
 - cssnano plugin
 
-## Usage:
+## Usage
+
+After running you will find your minified yml in the `min` directory. A folder will also be created with all the code for all of your contexts and variants can be found there for easy code review.
+
+### Run once
 
 ```shell
 yml-min <metamodel.yml>
 ```
 
-You will find your minified yml in the `min` directory. A folder will also be created with your filename and the code for all of your contexts and variants can be found there for easy code review.
+### Watch for changes
+
+`yml-min` installs with `nodemon` by default, to automatically update paste this into the `scripts` section of your `package.json` file.
+
+```json
+"watch": "nodemon --watch <metamodel.yml> --exec \"yml-min <metamodel.yml>\""
+```
+
