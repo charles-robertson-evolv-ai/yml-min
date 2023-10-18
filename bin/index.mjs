@@ -29,7 +29,7 @@ if (!sourceFilename) {
 }
 
 const outputDir = path.basename(sourceFilename, '.yml');
-const minifiedDir = 'min';
+const minifiedDir = '.';
 createDir(outputDir);
 createDir(minifiedDir);
 
