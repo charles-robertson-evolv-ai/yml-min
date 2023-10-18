@@ -25,7 +25,7 @@ npm install @charles-evolv/yml-min
 
 ## Usage
 
-After running you will find your minified yml in the `min` directory. A folder will also be created with all the code for all of your contexts and variants can be found there for easy code review.
+After running you will find your minified yml in the base folder near your original file. A folder will also be created with all the code for all of your contexts and variants can be found there for easy code review.
 
 ### Run once
 
@@ -35,9 +35,14 @@ npx yml-min <metamodel.yml>
 
 ### Watch for changes
 
-`yml-min` installs with `nodemon` by default, to automatically update paste this into the `scripts` section of your `package.json` file.
+`yml-min` installs with `nodemon` by default, to automatically update your minified file every time your original yml is saved, paste this into the `scripts` section of your `package.json` file.
 
 ```json
 "watch": "nodemon --watch <metamodel.yml> --exec \"yml-min <metamodel.yml>\""
 ```
 
+and run with:
+
+```shell
+npm run watch
+```
